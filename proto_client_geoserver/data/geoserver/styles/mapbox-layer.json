@@ -1,0 +1,40 @@
+{
+	"version": 8,
+	"name": "Style pour une couche classique sur le service Geoserver© (batiment surfacique)",
+	"sprite": "",
+	"glyphs": "",
+	"sources": {
+		"n0_bati_surf": {
+			"type": "vector",
+			"scheme": "tms",
+			"tiles": ["http://calac-4.ign.fr:8080/geoserver/gwc/service/tms/1.0.0/INCA:n0_bati_surf@EPSG%3A3857@pbf/{z}/{x}/{-y}.pbf"],
+			"minZoom": 0,
+			"maxZoom": 21
+		}
+	},
+	"transition": {
+		"duration": 300,
+		"delay": 0
+	},
+	"layers": [{
+		"id": "INCA:n0_bati_surf",
+		"type": "fill",
+		"source": "n0_bati_surf",
+		"source-layer": "n0_bati_surf",
+		"minzoom": 12,
+		"layout": {
+			"visibility": "visible"
+		},
+		"paint": {
+			"fill-color": [
+				"match",
+				["get","symbo"],
+				"BATI_INDUSTRIEL","hsl(0, 100%, 50%)",
+				"NATATION_SURF","hsl(223, 66%, 59%)",
+				"SERRE_SURF","hsl(0, 13%, 42%)",
+				"HANGAR","hsl(59, 100%, 50%)",
+				"hsl(0, 3%, 50%)"
+			]
+		}
+	}]
+}

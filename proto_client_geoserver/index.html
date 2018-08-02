@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr" data-ember-extension="1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Prototype sur des pyramides ecran sur Geoserver©</title>
+
+    <script src="node_modules/openlayers/dist/ol-debug.js"></script>
+    <script src="node_modules/ol-mapbox-style/dist/olms.js"></script>
+    <script src="node_modules/ol-layerswitcher/dist/ol-layerswitcher.js"></script>
+
+    <link rel="stylesheet" href="node_modules/openlayers/dist/ol.css">
+    <link rel="stylesheet" href="node_modules/ol-layerswitcher/src/ol-layerswitcher.css">
+
+    <link rel="stylesheet" href="public/charte.css">
+    <link rel="stylesheet" href="public/page.css">
+    <link rel="stylesheet" href="public/application.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        <header class="header">
+            <div class="header-content">
+                 <p class="logoIGN"><a href="/index.html"><img src="public/images/logoIGN.png" alt="IGN" width="94" height="100"></a></p>
+                <h1 style="text-align: center;">Prototype de pyramides ecran sur Geoserver ©</h1>
+            </div>
+        </header>
+
+        <!-- controles -->
+        <aside class="controls">
+            <div id="zoom-container">Niveau de zoom : <span id="zoom-level">?</span></div>
+            <form>
+                <label>Projection </label>
+                <select id="mouse-projection">
+                    <option value="EPSG:4326">EPSG:4326</option>
+                    <option value="EPSG:3857">EPSG:3857</option>
+                </select>
+                <label>Precision </label>
+                <input id="mouse-precision" type="number" min="0" max="12" value="4"/>
+            </form>
+            <div id="mouse-position"></div>
+        </aside>
+
+        <!-- carto -->
+        <article class="map">
+            <div id="map"></div>
+        </article>
+
+
+        <!-- menu de selection des couches -->
+        <aside class="menu">
+            <div id="menu-container"></div>
+        </aside>
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="header-content">
+                <p>
+                    <img class="logo" src="public/images/logoIGNsmall.png" alt="IGN" title="IGN" width="51" height="25">
+                    <img class="baseline" src="public/images/baselineIGN.png" alt="L'information grandeur nature" title="L'information grandeur nature" width="256" height="21">
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- script -->
+    <script src="index.js"></script>
+
+</body>
+</html>

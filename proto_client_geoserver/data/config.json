@@ -1,0 +1,71 @@
+{
+    "states" : {
+        "service": {
+            "host": "data/geojson/states.geojson",
+            "path": "",
+            "type": "geojson",
+            "style": "data/geojson/styles/mapbox-states.json",
+            "key": "states"
+        },
+        "visible": true,
+        "center": [-100, 40],
+        "zoom": 3,
+        "resources": {
+            "title": "GeoJSON",
+            "description": "Exemple avec un fichier GeoJSON sur les USA (filtres)",
+            "image": "data/geojson/img/layer.png",
+            "label": "standard"
+        }
+    },
+    "INCA:n0_bati_surf" : {
+        "service": {
+            "host": "http://calac-4.ign.fr:8080/geoserver/gwc/service/tms/1.0.0/",
+            "path": "INCA:n0_bati_surf@EPSG:3857@pbf/{z}/{x}/{-y}.pbf",
+            "type": "vector",
+            "style": "data/geoserver/styles/mapbox-layer.json",
+            "key": "n0_bati_surf"
+        },
+        "visible": true,
+        "center": [2.4, 48.8],
+        "resources": {
+            "title": "Couche simple Geoserver©",
+            "description": "Couche simple Geoserver© (batiments surfaciques)",
+            "image": "data/geoserver/img/layer1.png",
+            "label": "standard"
+        }
+    },
+    "INCA:pyramide_n0" : {
+        "service": {
+            "host": "http://calac-4.ign.fr:8080/geoserver/gwc/service/tms/1.0.0/",
+            "path": "INCA:pyramide_n0@EPSG:3857@pbf/{z}/{x}/{-y}.pbf",
+            "type": "vector",
+            "style": "data/geoserver/styles/mapbox-agregat.json",
+            "key": "pyramide_n0"
+        },
+        "visible": true,
+        "center": [2.4, 48.8],
+        "resources": {
+            "title": "Agregat Geoserver©",
+            "description": "Agregat Geoserver© (batiments surfaciques & routes principales)",
+            "image": "data/geoserver/img/layer2.png",
+            "label": "standard"
+        }
+    },
+    "INCA:pyramide_proto" : {
+        "service": {
+            "host": "http://calac-4.ign.fr:8080/geoserver/gwc/service/tms/1.0.0/",
+            "path": "INCA:pyramide_proto@EPSG:3857@pbf/{z}/{x}/{-y}.pbf",
+            "type": "vector",
+            "style": "data/geoserver/styles/mapbox-agregats.json",
+            "key": "pyramide_proto"
+        },
+        "visible": true,
+        "center": [2.4, 48.8],
+        "resources": {
+            "title": "Assemblage d'agregats Geoserver©",
+            "description": "Agregat Geoserver© constitué d'autres agregats",
+            "image": "data/geoserver/img/layer3.png",
+            "label": "standard"
+        }
+    }
+}

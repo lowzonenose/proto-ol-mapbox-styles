@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+}
+
+.footer {
+}
+
+.map {
+}
+
+.controls {
+}
+
+.menu {
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  .map { flex: 3 0px; }
+  .controls { order: 1; }
+  .map { order: 2; }
+  .menu { order: 3; }
+  .footer { order: 4; }
+}
