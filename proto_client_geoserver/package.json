@@ -12,6 +12,6 @@
     "http-server": "^0.11.1",
     "ol-layerswitcher": "^2.0.0",
     "ol-mapbox-style": "^3.0.1",
-    "openlayers": "^4.4.2"
+    "openlayers": "4.6.5"
   }
 }

@@ -22,14 +22,48 @@
             "host": "http://calac-4.ign.fr:8080/geoserver/gwc/service/tms/1.0.0/",
             "path": "INCA:n0_bati_surf@EPSG:3857@pbf/{z}/{x}/{-y}.pbf",
             "type": "vector",
-            "style": "data/geoserver/styles/mapbox-layer.json",
+            "style": "data/geoserver/styles/mapbox-layer-bati-surfacique.json",
             "key": "n0_bati_surf"
         },
         "visible": true,
         "center": [2.4, 48.8],
         "resources": {
-            "title": "Couche simple Geoserver©",
+            "title": "Couche simple Geoserver© (Surface)'",
             "description": "Couche simple Geoserver© (batiments surfaciques)",
+            "image": "data/geoserver/img/layer1.png",
+            "label": "standard"
+        }
+    },
+    "INCA:n0_bati_ponc" : {
+        "service": {
+            "host": "http://calac-4.ign.fr:8080/geoserver/gwc/service/tms/1.0.0/",
+            "path": "INCA:n0_bati_ponc@EPSG:3857@pbf/{z}/{x}/{-y}.pbf",
+            "type": "vector",
+            "style": "data/geoserver/styles/mapbox-layer-bati-ponctuel.json",
+            "key": "n0_bati_ponc"
+        },
+        "visible": true,
+        "center": [2.4, 48.8],
+        "resources": {
+            "title": "Couche simple Geoserver© (Ponctuel)'",
+            "description": "Couche simple Geoserver© (batiments ponctuels)",
+            "image": "data/geoserver/img/layer1.png",
+            "label": "standard"
+        }
+    },
+    "INCA:routier_auto" : {
+        "service": {
+            "host": "http://calac-4.ign.fr:8080/geoserver/gwc/service/tms/1.0.0/",
+            "path": "INCA:routier_auto@EPSG:3857@pbf/{z}/{x}/{-y}.pbf",
+            "type": "vector",
+            "style": "data/geoserver/styles/mapbox-layer-route-lineaire.json",
+            "key": "routier_auto"
+        },
+        "visible": true,
+        "center": [2.4, 48.8],
+        "resources": {
+            "title": "Couche simple Geoserver© (Lineaire)",
+            "description": "Couche simple Geoserver© (routes)",
             "image": "data/geoserver/img/layer1.png",
             "label": "standard"
         }

@@ -3,11 +3,13 @@
 	"name": "Styles pour une couche agregat sur le service Geoserver© (batiment surfacique + route principale)",
 	"sprite": "",
 	"glyphs": "",
+	"center": [2.4, 48.8],
+	"zoom": 16,
 	"sources": {
 		"pyramide_n0": {
 			"type": "vector",
 			"scheme": "tms",
-			"tiles": ["http://calac-4.ign.fr:8080/geoserver/gwc/service/tms/1.0.0/INCA:pyramide_n0@EPSG%3A3857@pbf/{z}/{x}/{-y}.pbf"],
+			"url": "http://calac-4.ign.fr:8080/geoserver/gwc/service/tms/1.0.0/INCA:pyramide_n0@EPSG%3A3857@pbf/{z}/{x}/{-y}.pbf",
 			"minZoom": 0,
 			"maxZoom": 21
 		}

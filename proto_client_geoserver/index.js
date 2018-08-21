@@ -125,7 +125,9 @@ function _addLayerStyle (config, key) {
         visible: _visible,
         source : new ol.source.VectorTile({
             tilePixelRatio: 1, // oversampling when > 1
-            tileGrid: ol.tilegrid.createXYZ({maxZoom: 30}),
+            tileGrid: ol.tilegrid.createXYZ({
+                tileSize : 256
+            }),
             format: _format,
             url: _proxy + _url
         }),

@@ -3,11 +3,13 @@
 	"name": "Styles pour un ensemble d'agregat sur le service Geoserver© (batiment surfacique + route principale)",
 	"sprite": "",
 	"glyphs": "",
+	"center": [2.4, 48.8],
+	"zoom": 16,
 	"sources": {
 		"pyramide_proto": {
 			"type": "vector",
 			"scheme": "tms",
-			"tiles": ["http://calac-4.ign.fr:8080/geoserver/gwc/service/tms/1.0.0/INCA:pyramide_proto@EPSG%3A3857@pbf/{z}/{x}/{-y}.pbf"],
+			"url": "http://calac-4.ign.fr:8080/geoserver/gwc/service/tms/1.0.0/INCA:pyramide_proto@EPSG%3A3857@pbf/{z}/{x}/{-y}.pbf",
 			"minZoom": 0,
 			"maxZoom": 21
 		}
@@ -110,7 +112,7 @@
 		},
 		{
 			"id": "INCA:n99_oro_relief_0",
-			"type": "line",
+			"type": "fill",
 			"source": "pyramide_proto",
 			"source-layer": "n99_oro_relief_0",
 			"minzoom": 12,
@@ -118,13 +120,13 @@
 				"visibility": "visible"
 			},
 			"paint": {
-				"line-color": "rgba(255, 0, 0, 1)",
+				"fill-color": "rgba(255, 0, 0, 1)",
 		        "line-width": 0.5
 			}
 		},
 		{
 			"id": "INCA:n99_oro_relief_100",
-			"type": "line",
+			"type": "fill",
 			"source": "pyramide_proto",
 			"source-layer": "n99_oro_relief_100",
 			"minzoom": 12,
@@ -132,13 +134,13 @@
 				"visibility": "visible"
 			},
 			"paint": {
-				"line-color": "rgba(255, 0, 0, 1)",
+				"fill-color": "rgba(255, 0, 0, 1)",
 		        "line-width": 0.5
 			}
 		},
 		{
 			"id": "INCA:n99_oro_relief_200",
-			"type": "line",
+			"type": "fill",
 			"source": "pyramide_proto",
 			"source-layer": "n99_oro_relief_200",
 			"minzoom": 12,
@@ -146,13 +148,13 @@
 				"visibility": "visible"
 			},
 			"paint": {
-				"line-color": "rgba(255, 0, 0, 1)",
+				"fill-color": "rgba(255, 0, 0, 1)",
 		        "line-width": 0.5
 			}
 		},
 		{
 			"id": "INCA:n99_oro_relief_1000",
-			"type": "line",
+			"type": "fill",
 			"source": "pyramide_proto",
 			"source-layer": "n99_oro_relief_1000",
 			"minzoom": 12,
@@ -160,46 +162,46 @@
 				"visibility": "visible"
 			},
 			"paint": {
-				"line-color": "rgba(255, 0, 0, 1)",
+				"fill-color": "rgba(255, 0, 0, 1)",
 		        "line-width": 0.5
 			}
 		},
 		{
 			"id": "INCA:n99_oro_relief_3000",
-			"type": "line",
+			"type": "fill",
 			"source": "pyramide_proto",
 			"source-layer": "n99_oro_relief_3000",
 			"layout": {
 				"visibility": "visible"
 			},
 			"paint": {
-				"line-color": "rgba(255, 0, 0, 1)",
+				"fill-color": "rgba(255, 0, 0, 1)",
 		        "line-width": 0.5
 			}
 		},
 		{
 			"id": "INCA:n99_oro_relief_4000",
-			"type": "line",
+			"type": "fill",
 			"source": "pyramide_proto",
 			"source-layer": "n99_oro_relief_4000",
 			"layout": {
 				"visibility": "visible"
 			},
 			"paint": {
-				"line-color": "rgba(255, 0, 0, 1)",
+				"fill-color": "rgba(255, 0, 0, 1)",
 		        "line-width": 0.5
 			}
 		},
 		{
 			"id": "INCA:n99_oro_relief_5000",
-			"type": "line",
+			"type": "fill",
 			"source": "pyramide_proto",
 			"source-layer": "n99_oro_relief_5000",
 			"layout": {
 				"visibility": "visible"
 			},
 			"paint": {
-				"line-color": "rgba(255, 0, 0, 1)",
+				"fill-color": "rgba(255, 0, 0, 1)",
 		        "line-width": 0.5
 			}
 		}

@@ -1,8 +1,8 @@
 {
   "version": 8,
   "pitch": 0,
-  "sprite": "",
-  "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+  "sprite": "./data/geojson/sprite/sprite-states",
+  "glyphs": "",
   "name": "states",
   "bearing": 0,
   "zoom": 3,
@@ -17,7 +17,7 @@
       "maxzoom": 18,
       "buffer": 128,
       "tolerance": 0.375,
-      "cluster": false,
+      "cluster": true,
       "clusterRadius": 50,
       "clusterMaxZoom": 5
     }
@@ -98,7 +98,7 @@
       "minzoom": 4,
       "maxzoom": 5,
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "text-field": "{STATE_ABBR}",
         "text-justify": "center",
         "text-size": 12,
@@ -114,7 +114,7 @@
       "source": "states",
       "minzoom": 5,
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "text-field": [
           "concat",
           [
@@ -127,6 +127,8 @@
             "STATE_NAME"
           ]
         ],
+        "icon-image": "accommodation_camping",
+        "icon-size": 1,
         "text-size": 12,
         "text-justify": "center",
         "text-font": [
