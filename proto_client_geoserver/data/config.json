@@ -5,7 +5,8 @@
             "path": "",
             "type": "geojson",
             "style": "data/geojson/styles/mapbox-states.json",
-            "key": "states"
+            "key": "states",
+            "proxy": ""
         },
         "visible": true,
         "center": [-100, 40],
@@ -23,7 +24,8 @@
             "path": "INCA:n0_bati_surf@EPSG:3857@pbf/{z}/{x}/{-y}.pbf",
             "type": "vector",
             "style": "data/geoserver/styles/mapbox-layer-bati-surfacique.json",
-            "key": "n0_bati_surf"
+            "key": "n0_bati_surf",
+            "proxy": ""
         },
         "visible": true,
         "center": [2.4, 48.8],
@@ -40,7 +42,8 @@
             "path": "INCA:n0_bati_ponc@EPSG:3857@pbf/{z}/{x}/{-y}.pbf",
             "type": "vector",
             "style": "data/geoserver/styles/mapbox-layer-bati-ponctuel.json",
-            "key": "n0_bati_ponc"
+            "key": "n0_bati_ponc",
+            "proxy": ""
         },
         "visible": true,
         "center": [2.4, 48.8],
@@ -57,10 +60,11 @@
             "path": "INCA:routier_auto@EPSG:3857@pbf/{z}/{x}/{-y}.pbf",
             "type": "vector",
             "style": "data/geoserver/styles/mapbox-layer-route-lineaire.json",
-            "key": "routier_auto"
+            "key": "routier_auto",
+            "proxy": ""
         },
         "visible": true,
-        "center": [2.4, 48.8],
+        "center": [2.3982, 48.8275],
         "resources": {
             "title": "Couche simple Geoserver© (Lineaire)",
             "description": "Couche simple Geoserver© (routes)",
@@ -74,7 +78,8 @@
             "path": "INCA:pyramide_n0@EPSG:3857@pbf/{z}/{x}/{-y}.pbf",
             "type": "vector",
             "style": "data/geoserver/styles/mapbox-agregat.json",
-            "key": "pyramide_n0"
+            "key": "pyramide_n0",
+            "proxy": ""
         },
         "visible": true,
         "center": [2.4, 48.8],
@@ -91,7 +96,8 @@
             "path": "INCA:pyramide_proto@EPSG:3857@pbf/{z}/{x}/{-y}.pbf",
             "type": "vector",
             "style": "data/geoserver/styles/mapbox-agregats.json",
-            "key": "pyramide_proto"
+            "key": "pyramide_proto",
+            "proxy": ""
         },
         "visible": true,
         "center": [2.4, 48.8],

@@ -12,7 +12,7 @@
 // clef par defaut !
 var keyByDefault = "states"; // GeoJSON...
 
-// proxy
+// proxy par defaut (surchargé par config.json)
 var proxy = "http://localhost/proxy/proxy.php?url=";
 
 // carte
@@ -108,7 +108,7 @@ function _addLayerStyle (config, key) {
 
     // gestion du style
     var _id      = config[key].service.key;
-    var _proxy   = (config[key].service.type === "vector") ? proxy : "";
+    var _proxy   = config[key].service.proxy;
     var _url     = config[key].service.host + config[key].service.path;
     var _title   = config[key].title;
     var _visible = config[key].visible;

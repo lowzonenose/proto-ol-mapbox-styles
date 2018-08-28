@@ -3,7 +3,7 @@
 	"name": "Style pour une couche classique sur le service Geoserver© (routes)",
 	"sprite": "",
 	"glyphs": "",
-	"center": [2.4, 48.8],
+	"center": [2.3982, 48.8275],
 	"zoom": 16,
 	"sources": {
 		"routier_auto": {
