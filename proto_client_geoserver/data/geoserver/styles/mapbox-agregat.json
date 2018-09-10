@@ -8,8 +8,8 @@
 	"sources": {
 		"pyramide_n0": {
 			"type": "vector",
-			"scheme": "tms",
-			"url": "http://calac-4.ign.fr:8080/geoserver/gwc/service/tms/1.0.0/INCA:pyramide_n0@EPSG%3A3857@pbf/{z}/{x}/{-y}.pbf",
+			"scheme": "xyz",
+			"tiles": ["http://calac-4.ign.fr:8080/geoserver/gwc/service/tms/1.0.0/INCA:pyramide_n0@EPSG%3A3857@pbf/{z}/{x}/{-y}.pbf"],
 			"minZoom": 0,
 			"maxZoom": 21
 		}

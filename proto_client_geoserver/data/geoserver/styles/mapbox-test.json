@@ -1,0 +1,46 @@
+{
+	"version": 8,
+	"name": "Style pour une couche classique sur le service Geoserver© (routier)",
+	"metadata": {
+		"maputnik:renderer": "ol3"
+	},
+	"sprite": "",
+	"zoom": 17,
+	"center":[
+        2.3913,
+        48.8274
+	],
+	"sources": {
+		"routier_auto": {
+			"type": "vector",
+			"url": "./data/geoserver/styles/source-test.json"
+		}
+	},
+	"layers": [{
+		"id": "routier_auto",
+		"type": "line",
+		"source": "routier_auto",
+		"source-layer": "routier_auto",
+		"layout": {
+			"visibility": "visible"
+		},
+		"paint": {
+			"line-color": [
+				"match",
+				["get","symbo"],
+				"AUTOROU_PEAGE","#ff0000",
+				"AUTOROU_LIBRE","#0000ff",
+				"BRET_AUTO_PEAGE_3","#ff0000",
+				"BRET_AUTO_PEAGE_2","#ff0000",
+				"BRET_AUTO_PEAGE_1","#ff0000",
+				"BRET_AUTO_LIBRE_3","#0000ff",
+				"BRET_AUTO_LIBRE_2","#0000ff",
+				"BRET_AUTO_LIBRE_1","#0000ff",
+				"BRET_AUTO_LIBRE","#ffff00",
+				"AUTOROU_CONSTR","#00ff00",
+				"#808080"
+			],
+			"line-width":3
+		}
+	}]
+}

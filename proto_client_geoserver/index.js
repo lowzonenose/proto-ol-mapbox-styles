@@ -9,9 +9,6 @@
 //              ->-> "INCA:pyramide_n10"
 //              ->-> "INCA:pyramide_n99"
 
-// clef par defaut !
-var keyByDefault = "states"; // GeoJSON...
-
 // proxy par defaut (surchargé par config.json)
 var proxy = "http://localhost/proxy/proxy.php?url=";
 
@@ -71,14 +68,14 @@ function loadMap (config) {
         ],
         controls: ol.control.defaults({}).extend([mousePositionControl, layerSwitcher]),
         view: new ol.View({
-            center: (config[keyByDefault].center) ? ol.proj.transform(config[keyByDefault].center, 'EPSG:4326', 'EPSG:3857') : [270000, 6250000],
+            center: [0, 0],
             rotation: 0,
-            zoom: config[keyByDefault].zoom || 15
+            zoom: 15
         })
     });
 
     // gestion du style
-    _addLayerStyle(config, keyByDefault);
+    _addLayerStyle(config, "states");
 
     // gestion du zoom
     var zoomContainer = document.getElementById('zoom-level');
@@ -109,32 +106,12 @@ function _addLayerStyle (config, key) {
     // gestion du style
     var _id      = config[key].service.key;
     var _proxy   = config[key].service.proxy;
-    var _url     = config[key].service.host + config[key].service.path;
-    var _title   = config[key].title;
-    var _visible = config[key].visible;
-    var _format  = (config[key].service.type === "vector") ? new ol.format.MVT() : new ol.format.GeoJSON();
     var _style   = config[key].service.style;
 
     var _center  = (config[key].center) ? ol.proj.transform(config[key].center, 'EPSG:4326', 'EPSG:3857') : [270000, 6250000];
     var _zoom    = config[key].zoom || 17;
-
-    // couche à ajouter
-    var _layer = new ol.layer.VectorTile({
-        id: key,
-        title: _title,
-        visible: _visible,
-        source : new ol.source.VectorTile({
-            tilePixelRatio: 1, // oversampling when > 1
-            tileGrid: ol.tilegrid.createXYZ({
-                tileSize : 256
-            }),
-            format: _format,
-            url: _proxy + _url
-        }),
-        // minResolution : 0,      // TODO ?
-        // maxResolution : 200000, // TODO ?
-        declutter: true
-    });
+    var _title   = config[key].title;
+    var _visible = config[key].visible;
 
     // application du style
     fetch(_style)
@@ -143,13 +120,10 @@ function _addLayerStyle (config, key) {
             if (response.ok) {
                 response.json().then(function(style) {
                     console.log(style);
-                    olms.applyStyle(_layer, style, _id).then(function () {
-                        map.addLayer(_layer);
-                    });
-                })
-                .catch(function (error) {
-                    console.error(error);
-                    map.addLayer(_layer);
+                    // hack ?
+                    var sprite = style.sprite.substring(0, style.sprite.indexOf('undefined'));
+                    style.sprite = sprite;
+                    olms.apply(map, style);
                 });
             }
         }
@@ -258,7 +232,7 @@ function loadLayers (config) {
             div.appendChild(label);
 
             // selection par defaut
-            if (key === keyByDefault) {
+            if (key === "states") {
                 input.checked = true;
                 _createDomImage(key, div);
             }

@@ -13,7 +13,7 @@
   "sources": {
     "states": {
       "type": "geojson",
-      "data": "./data/states.geojson",
+      "data": "./data/geojson/states.geojson",
       "maxzoom": 18,
       "buffer": 128,
       "tolerance": 0.375,

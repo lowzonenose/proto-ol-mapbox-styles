@@ -1,9 +1,6 @@
 {
     "states" : {
         "service": {
-            "host": "data/geojson/states.geojson",
-            "path": "",
-            "type": "geojson",
             "style": "data/geojson/styles/mapbox-states.json",
             "key": "states",
             "proxy": ""
@@ -20,9 +17,6 @@
     },
     "INCA:n0_bati_surf" : {
         "service": {
-            "host": "http://calac-4.ign.fr:8080/geoserver/gwc/service/tms/1.0.0/",
-            "path": "INCA:n0_bati_surf@EPSG:3857@pbf/{z}/{x}/{-y}.pbf",
-            "type": "vector",
             "style": "data/geoserver/styles/mapbox-layer-bati-surfacique.json",
             "key": "n0_bati_surf",
             "proxy": ""
@@ -38,9 +32,6 @@
     },
     "INCA:n0_bati_ponc" : {
         "service": {
-            "host": "http://calac-4.ign.fr:8080/geoserver/gwc/service/tms/1.0.0/",
-            "path": "INCA:n0_bati_ponc@EPSG:3857@pbf/{z}/{x}/{-y}.pbf",
-            "type": "vector",
             "style": "data/geoserver/styles/mapbox-layer-bati-ponctuel.json",
             "key": "n0_bati_ponc",
             "proxy": ""
@@ -56,9 +47,6 @@
     },
     "INCA:routier_auto" : {
         "service": {
-            "host": "http://calac-4.ign.fr:8080/geoserver/gwc/service/tms/1.0.0/",
-            "path": "INCA:routier_auto@EPSG:3857@pbf/{z}/{x}/{-y}.pbf",
-            "type": "vector",
             "style": "data/geoserver/styles/mapbox-layer-route-lineaire.json",
             "key": "routier_auto",
             "proxy": ""
@@ -72,11 +60,23 @@
             "label": "standard"
         }
     },
+    "INCA:routier_auto2" : {
+        "service": {
+            "style": "data/geoserver/styles/mapbox-test.json",
+            "key": "routier_auto2",
+            "proxy": ""
+        },
+        "visible": true,
+        "center": [2.3982, 48.8275],
+        "resources": {
+            "title": "Couche simple Geoserver© (utilisation du format TileJSON 2.1.0)",
+            "description": "Couche simple Geoserver© (routes)",
+            "image": "data/geoserver/img/layer2.png",
+            "label": "standard"
+        }
+    },
     "INCA:pyramide_n0" : {
         "service": {
-            "host": "http://calac-4.ign.fr:8080/geoserver/gwc/service/tms/1.0.0/",
-            "path": "INCA:pyramide_n0@EPSG:3857@pbf/{z}/{x}/{-y}.pbf",
-            "type": "vector",
             "style": "data/geoserver/styles/mapbox-agregat.json",
             "key": "pyramide_n0",
             "proxy": ""
@@ -92,9 +92,6 @@
     },
     "INCA:pyramide_proto" : {
         "service": {
-            "host": "http://calac-4.ign.fr:8080/geoserver/gwc/service/tms/1.0.0/",
-            "path": "INCA:pyramide_proto@EPSG:3857@pbf/{z}/{x}/{-y}.pbf",
-            "type": "vector",
             "style": "data/geoserver/styles/mapbox-agregats.json",
             "key": "pyramide_proto",
             "proxy": ""
