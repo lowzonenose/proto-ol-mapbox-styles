@@ -1,0 +1,11 @@
+{
+	{{#files}}
+	"{{{name}}}": {
+		"image": "{{{name}}}.png",
+		"width":{{width}},
+		"height":{{height}},
+		"x" : {{x}},
+		"y" : {{y}}
+	}{{^isLast}},{{/isLast}}
+	{{/files}}
+}
