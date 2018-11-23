@@ -8,3 +8,5 @@
 
 # misc
 npm-debug.log*
+package-lock.json
+*.pbf

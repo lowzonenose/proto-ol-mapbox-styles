@@ -25,3 +25,9 @@ non commit
 
 ## éditeur Maputnik©
 éditeur pour client MapBoxGL et OpenLayers...
+
+## creation de sprites
+cf. spritesheet.js
+
+## validation du style
+cf. vtvalidate
